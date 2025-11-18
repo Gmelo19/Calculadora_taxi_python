@@ -1,0 +1,17 @@
+Calculadora para taxistas
+
+    Este Calculadora será voltada para precificação de viagens executivas!
+    No caso com toda a precificação do taxi e preço voltado com as bases que estao no site da SPTRANS.
+
+    E tera como API o proprio google maps para nos auxiliar ir do ponto A ao B.
+    No caso tera com parametros a distancia, tarifa inicial, valor por km e caso tenha espera o valor sera computado da mesma maneira.
+
+
+
+Estrutura do projeto[
+    calculadora_frete/
+│── main.py          (onde ficará a interface Tkinter)
+│── calculo.py       (lógica da calculadora)
+│── utils.py         (futuramente logs, validações)
+│── assets/          (ícones, imagens da interface)
+]
