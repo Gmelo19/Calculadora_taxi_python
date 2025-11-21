@@ -7,8 +7,8 @@ def criar_tabela():
     conexao = conectar()
     cursor = conexao.cursor()
 
-    cursos.execute("""
-        CREATE TABLE IF NOTE EXISTS corrida (
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS corrida (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             distacia REAL,
             tarifa REAL,
