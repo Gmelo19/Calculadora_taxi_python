@@ -46,6 +46,10 @@ Linha:
 ''''python
 API_KEY = "SUA_CHAVE_AQUI"
 
+
+
+
+
 📂 Estrutura do Projeto
 calculadora_taxi/
 │
@@ -68,6 +72,10 @@ calculadora_taxi/
 └── data/
     ├── pdfs/
     └── database/
+
+
+
+
 
 ▶ Como executar
 Instalar dependências:
