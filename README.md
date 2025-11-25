@@ -50,7 +50,7 @@ Salva automaticamente cada corrida com:
 ## 📦 Estrutura do Projeto
 
     calculadora_taxi/
-│
+````│
 ├── run.py
 ├── requirements.txt
 │
@@ -70,7 +70,7 @@ Salva automaticamente cada corrida com:
 └── data/
 ├── pdfs/
 └── database/
-
+````
 
 ---
 
