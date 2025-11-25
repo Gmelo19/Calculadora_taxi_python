@@ -30,27 +30,27 @@ Ela é usada para:
 
 ### Endpoints utilizados:
 
-/geocode/search
-/v2/directions/driving-car
 
+---
 
-### Configurando a API:
-Crie uma conta gratuita em:
+## 🔑 Configurando a API
+
+1. Crie uma conta gratuita em:
 https://openrouteservice.org/
 
-Depois coloque sua chave no arquivo:
-src/api/api_rotas.py
+2. Gere sua API Key
+
+3. Insira sua chave no arquivo:
 
 
-Linha:
-''''python
+
+Na linha:
+```python
 API_KEY = "SUA_CHAVE_AQUI"
 
-
-
-
-
-##📂 Estrutura do Projeto
+```
+---
+📂 Estrutura do Projeto
 calculadora_taxi/
 │
 ├── run.py
@@ -72,22 +72,20 @@ calculadora_taxi/
 └── data/
     ├── pdfs/
     └── database/
+---
 
-
-
-
-
-##▶ Como executar
+▶ Como executar
 Instalar dependências:
 pip install -r requirements.txt
 
 Rodar o programa:
 python run.py
-
+---
 👤 Autor
 
 Gustavo Melo
 Desenvolvedor Python Júnior
+
 
 
 
