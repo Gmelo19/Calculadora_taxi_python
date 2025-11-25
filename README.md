@@ -1,92 +1,108 @@
-# 🚖 Calculadora de Táxi (Python + Tkinter)
+# 🚖 Calculadora de Frete para Táxi – Python (Tkinter + SQLite + API de Rotas)
 
-Este é um projeto desenvolvido para praticar Python, Tkinter, organização de código e consumo de API externa.  
-A aplicação calcula o valor de uma corrida de táxi, consulta a distância real entre dois endereços e salva os dados localmente.
+Projeto desenvolvido para praticar Python aplicando interface gráfica (Tkinter), integração com API externa (OpenRouteService), cálculo automático de rotas reais e persistência de dados usando SQLite.
 
----
-
-## 🧰 Funcionalidades
-
-- 🚗 Calcular distância real entre dois endereços  
-- ⏱ Mostrar tempo estimado da viagem  
-- 📏 Calcular valor total da corrida  
-- 💾 Salvar corridas no banco de dados (SQLite)  
-- 📊 Visualizar histórico de corridas  
-- 📜 Gerar recibo PDF  
-- 🎨 Interface moderna em Dark Mode  
+A aplicação calcula o valor de uma corrida de táxi com base em distância, tarifa inicial, valor por km, tempo parado e também permite obter a **distância real entre dois endereços** usando API externa.
 
 ---
 
-## 🌐 API Utilizada: OpenRouteService
+## ✨ Funcionalidades
 
-O projeto utiliza a **OpenRouteService**, uma API gratuita baseada no OpenStreetMap.
+### 🖥 Interface gráfica moderna
+- Desenvolvida com **Tkinter** e estilo personalizado (tema claro/escuro opcional)
 
-Ela é usada para:
+### 🚗 Cálculo Completo da Corrida
+- Distância (manual ou automática)
+- Tarifa inicial
+- Valor por KM
+- Valor por espera (opcional)
+- Total calculado
 
-- Converter endereço em latitude/longitude  
-- Obter rota real de carro  
-- Calcular distância em KM  
-- Calcular tempo estimado em minutos  
+### 🌍 Consulta de Rota Real (API)
+Integração com a API **OpenRouteService**:
+- Converte endereços para latitude/longitude (geocoding)
+- Calcula distância real
+- Obtém tempo estimado de viagem
+- Atualiza automaticamente o campo de distância
 
-### Endpoints utilizados:
+Endpoints utilizados:
+- `/geocode/search`
+- `/v2/directions/driving-car`
 
+### 💾 Banco de Dados (SQLite)
+Salva automaticamente cada corrida com:
+- Distância
+- Tarifas
+- Espera
+- Total final
+- Data/Hora
+
+### 📜 Histórico de Corridas
+- Listado em uma nova janela
+- Carregamento direto do banco
+
+### 🧾 Geração de PDF
+- Cria recibo da corrida
+- Salva automaticamente na pasta `/data/pdfs`
 
 ---
 
-## 🔑 Configurando a API
+## 📦 Estrutura do Projeto
 
-1. Crie uma conta gratuita em:
-https://openrouteservice.org/
-
-2. Gere sua API Key
-
-3. Insira sua chave no arquivo:
-
-
-
-Na linha:
-```python
-API_KEY = "SUA_CHAVE_AQUI"
-
-```
----
-📂 Estrutura do Projeto
-calculadora_taxi/
+    calculadora_taxi/
 │
 ├── run.py
 ├── requirements.txt
 │
 ├── src/
-│   ├── main.py
-│   ├── calculo.py
-│   │
-│   ├── api/
-│   │   └── api_rotas.py
-│   │
-│   ├── database/
-│   │   └── banco.py
-│   │
-│   └── ui/
-│       └── toplevel.py
+│ ├── main.py
+│ ├── calculo.py
+│ │
+│ ├── api/
+│ │ └── api_rotas.py
+│ │
+│ ├── database/
+│ │ └── banco.py
+│ │
+│ └── ui/
+│ └── toplevel.py
 │
 └── data/
-    ├── pdfs/
-    └── database/
+├── pdfs/
+└── database/
+
+
 ---
 
-▶ Como executar
-Instalar dependências:
+## 🔧 Instalação e Execução
+
+### 1️⃣ Instalar dependências:
+```bash
 pip install -r requirements.txt
+```
 
-Rodar o programa:
-python run.py
+2️⃣ Executar o programa:
+- python run.py
+
+## 🔑 Configurar API de Rotas
+
+- Crie sua conta gratuita:
+https://openrouteservice.org/
+- Copie sua chave (API KEY)
+- Cole no arquivo abaixo:
+```API_KEY = "SUA_CHAVE_AQUI"```
+
+## 🛣 Próximas Melhorias (Roadmap)
+
+- Modo noturno/dark completo
+- Gráfico dos valores das corridas
+- Exportar histórico completo em PDF
+- Integração com GPS no celular (APK futuramente)
+- Layout 100% responsivo
+
 ---
-👤 Autor
 
+## 👤 Autor
 Gustavo Melo
+
 Desenvolvedor Python Júnior
-
-
-
-
-
