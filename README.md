@@ -50,7 +50,7 @@ API_KEY = "SUA_CHAVE_AQUI"
 
 
 
-📂 Estrutura do Projeto
+##📂 Estrutura do Projeto
 calculadora_taxi/
 │
 ├── run.py
@@ -77,7 +77,7 @@ calculadora_taxi/
 
 
 
-▶ Como executar
+##▶ Como executar
 Instalar dependências:
 pip install -r requirements.txt
 
