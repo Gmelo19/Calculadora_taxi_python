@@ -1,55 +1,86 @@
-# 🚕 Calculadora de Frete em Python (Tkinter + SQLite)
+# 🚖 Calculadora de Táxi (Python + Tkinter)
 
-Projeto desenvolvido para praticar Python aplicando conceitos de interface gráfica, lógica modular e persistência de dados usando SQLite. A aplicação permite calcular o valor de uma corrida de táxi com base em múltiplos parâmetros e salvar os resultados no banco de dados local.
-
----
-
-## 📌 Funcionalidades
-
-- Interface gráfica construída com **Tkinter**
-- Cálculo completo do valor da corrida:
-  - Distância percorrida (km)
-  - Tarifa inicial
-  - Valor por km
-  - Valor de espera (opcional)
-- Botão **Limpar Campos**
-- Persistência dos dados usando **SQLite**
-- Armazenamento das corridas com:
-  - Distância
-  - Tarifas e valores
-  - Espera
-  - Total calculado
-  - Data e hora
-
----
-## ▶️ Como Executar
-
-1. Clone ou baixe o repositório:
-git clone https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git
-2. Acesse a pasta do projeto:
-cd calculadora_frete
-3. Execute o programa:
-python main.py
-
-A tabela será criada automaticamente no primeiro uso.
+Este é um projeto desenvolvido para praticar Python, Tkinter, organização de código e consumo de API externa.  
+A aplicação calcula o valor de uma corrida de táxi, consulta a distância real entre dois endereços e salva os dados localmente.
 
 ---
 
-## 📌 Próximas Melhorias (Roadmap)
+## 🧰 Funcionalidades
 
-- Exibir histórico das corridas em uma nova janela
-- Interface modernizada com **ttk**
-- Exportar corrida para PDF
-- Tema claro/escuro
-- Cálculo automático de distância via endereço
-
----
-
-## 📣 Contribuições
-Sugestões são bem-vindas!  
-Fique à vontade para abrir issues ou enviar pull requests.
+- 🚗 Calcular distância real entre dois endereços  
+- ⏱ Mostrar tempo estimado da viagem  
+- 📏 Calcular valor total da corrida  
+- 💾 Salvar corridas no banco de dados (SQLite)  
+- 📊 Visualizar histórico de corridas  
+- 📜 Gerar recibo PDF  
+- 🎨 Interface moderna em Dark Mode  
 
 ---
 
-## 👨‍💻 Desenvolvido por
-**Gustavo Melo**
+## 🌐 API Utilizada: OpenRouteService
+
+O projeto utiliza a **OpenRouteService**, uma API gratuita baseada no OpenStreetMap.
+
+Ela é usada para:
+
+- Converter endereço em latitude/longitude  
+- Obter rota real de carro  
+- Calcular distância em KM  
+- Calcular tempo estimado em minutos  
+
+### Endpoints utilizados:
+
+/geocode/search
+/v2/directions/driving-car
+
+
+### Configurando a API:
+Crie uma conta gratuita em:
+https://openrouteservice.org/
+
+Depois coloque sua chave no arquivo:
+src/api/api_rotas.py
+
+
+Linha:
+''''python
+API_KEY = "SUA_CHAVE_AQUI"
+
+📂 Estrutura do Projeto
+calculadora_taxi/
+│
+├── run.py
+├── requirements.txt
+│
+├── src/
+│   ├── main.py
+│   ├── calculo.py
+│   │
+│   ├── api/
+│   │   └── api_rotas.py
+│   │
+│   ├── database/
+│   │   └── banco.py
+│   │
+│   └── ui/
+│       └── toplevel.py
+│
+└── data/
+    ├── pdfs/
+    └── database/
+
+▶ Como executar
+Instalar dependências:
+pip install -r requirements.txt
+
+Rodar o programa:
+python run.py
+
+👤 Autor
+
+Gustavo Melo
+Desenvolvedor Python Júnior
+
+
+
+
